@@ -1,7 +1,7 @@
 # The Boareskyr Bridge Scene
 A mod for Siege of Dragonspear that gives more impact to the important scene at Boareskyr Bridge.
-by jastey                                
-for BG:EE, BG:SoD, BGT, and EET         
+
+by jastey              
 
 ## GENERAL
 
