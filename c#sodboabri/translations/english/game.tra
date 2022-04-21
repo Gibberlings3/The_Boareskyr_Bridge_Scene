@@ -1,0 +1,15 @@
+/* script texts */
+@500  = ~What... what was that? Is everyone alright?~
+@501  = ~Dead... They are all dead!~
+
+/* journal entries */
+@10000 = ~The Siege of Dragonspear 
+
+I've had a vision of Bhaal's death. 
+
+As I crossed Boareskyr Bridge, I was stricken with a vision of my father's death. With the eyes of my allies upon me, I channeled the releasing energy, knocking down my allies around me... This may cause trouble for me down the road, if rumors of my parentage spread among the coalition.~
+@10001 = ~The Siege of Dragonspear 
+
+I've had a vision of Bhaal's death. 
+
+As I crossed Boareskyr Bridge, I was stricken with a vision of my father's death. With the eyes of my allies upon me, I channeled the releasing energy, killing my allies around me... This may cause trouble for me down the road, if rumors of my parentage spread among the coalition.~

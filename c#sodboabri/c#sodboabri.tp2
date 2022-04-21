@@ -1,0 +1,354 @@
+
+BACKUP ~c#sodboabri/backup~
+AUTHOR ~##~ 
+
+
+VERSION ~Alpha_220421~
+
+
+README ~c#sodboabri/readme.c#sodboabri.%LANGUAGE%.txt~ ~c#sodboabri/readme.c#sodboabri.english.txt~
+
+
+AUTO_TRA ~c#sodboabri/translations/autotra/%s~
+
+ALWAYS
+
+/* check for a ready SoD */
+
+ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN
+  FAIL @1002 /* ~Modmerge or Argent's DLC Merger is required before mods can be installed on this game.~ */
+END
+
+/* read in general definitions */
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+  INCLUDE ~c#sodboabri/lib/g3_bgee_cpmvars.tpa~
+END
+
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+  INCLUDE ~EET/other/cpmvars/eet_cpmvars.tpa~
+END
+
+INCLUDE ~sodrtd/lib/get_respone_strrefs.tph~
+
+INCLUDE ~c#sodboabri/lib/extra_regexp_vars.tph~
+OUTER_SPRINT newline ~%WNL%%LNL%%MNL%%TAB% ~
+
+OUTER_SET eet_200000 = GAME_IS ~eet~ ? 200000 : 0
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+  OUTER_SPRINT ~eet_2~ ~~
+END
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+  OUTER_SPRINT ~eet_2~ ~2~
+END
+
+
+
+//////////////////////////////////////////////////////////////////////
+/* all following actions are only processed ONCE for the whole mod, independent of un- and reinstalling of single components */
+
+ACTION_IF !FILE_EXISTS ~c#sodboabri/install/c#sodboabriinstall.mrk~ BEGIN
+
+    /* Copies tra files into the autotra-folder (to leave the originals untouched) */
+    DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
+      COPY ~c#sodboabri/translations/english~  ~c#sodboabri/translations/autotra/%LANGUAGE%~
+      COPY ~c#sodboabri/translations/%LANGUAGE%~  ~c#sodboabri/translations/autotra/%LANGUAGE%~
+    END
+
+    LAF autotra_workaround END
+
+  ACTION_DEFINE_ARRAY fl#noconvert BEGIN setup END
+
+  ACTION_DEFINE_ARRAY fl#reload BEGIN game END
+
+    LAF HANDLE_CHARSETS
+      INT_VAR
+        infer_charsets = 1
+      STR_VAR
+        tra_path = EVAL ~c#sodboabri/translations/autotra~
+        noconvert_array = fl#noconvert
+        reload_array = fl#reload
+    END
+
+
+//CamDawgs CD_STATE_NOTVALID 
+    APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
+
+
+
+  COPY ~c#sodboabri/install/component.xx~ ~c#sodboabri/install/c#sodboabriinstall.mrk~
+
+  END // c#sodboabriinstall.mrk
+
+ //reloading of tras needed for tp2. This needs to be done for every component:
+  LOAD_TRA ~c#sodboabri/translations/autotra/english/game.tra~
+  LOAD_TRA ~c#sodboabri/translations/autotra/%LANGUAGE%/game.tra~
+
+END //ALWAYS
+
+
+LANGUAGE ~English~
+         ~english~   
+         ~c#sodboabri/translations/english/setup.tra~
+	 ~c#sodboabri/translations/english/game.tra~
+
+LANGUAGE ~Deutsch~
+         ~german~   
+         ~c#sodboabri/translations/german/setup.tra~
+	 ~c#sodboabri/translations/german/game.tra~
+
+
+////////////////////////////////////////////////////////////////////////
+//////
+////// ~Scene at Boareskyr Bridge will be Acknowledged: Add NPC Reactions~
+////// 
+////////////////////////////////////////////////////////////////////////
+
+BEGIN @1001 /* ~Scene at Boareskyr Bridge will be Acknowledged~ */ DESIGNATED 0
+LABEL ~c#sodboabri_AcknowledgeSceneBoareskyrBridge~
+REQUIRE_PREDICATE ((GAME_IS ~eet~) OR (GAME_IS ~bgee~ AND FILE_EXISTS_IN_GAME ~bd0103.are~))  @1000 /* ~This component is only compatible with SoD and EET.~ */
+FORBID_COMPONENT ~EET_end.tp2~ ~0~ @1017
+FORBID_COMPONENT ~EET_end.tp2~ ~1~ @1017
+FORBID_COMPONENT ~c#sodboabri.tp2~ ~1~ @1009
+FORBID_COMPONENT ~c#sodboabri.tp2~ ~2~ @1009
+FORBID_COMPONENT ~c#sodboabri.tp2~ ~3~ @1009
+
+/* track whether the PC announced their heritage to the masses */
+INCLUDE ~c#sodboabri/tpa/add_trans_action_special.tpa~
+
+COMPILE EVALUATE_BUFFER ~c#sodboabri/dialogue/bhaalheritage_boareskyr_bridge.d~ USING ~c#sodboabri/translations/autotra/%s/dialogues.tra~
+
+/* patch cutscene so irenicus will not be the first one to start a dialogue after the incident but the FF healer instead */
+/* (Irenicus will still have his say after the FF soldiers and NPCs are done) */
+
+COPY_EXISTING ~bdcut28.BCS~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(ActionOverride("bdireni",MoveToPoint(\[875\.1490\]))[%newline%]*SmallWait(30)[%newline%]*ActionOverride(Player1,Face(NW))[%newline%]*SmallWait(5)[%newline%]*ActionOverride("bdireni",StartDialogNoSet(Player1))\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~%textToReplace%~ ~SetGlobal("C#stbb_BoareskyrbridgeScene","GLOBAL",6)
+		ActionOverride(Player1,FaceObject("bdfist24"))
+		SmallWait(2)
+		ActionOverride("bdfist24",SetDialog("c#stff24"))
+		SmallWait(5)
+		ActionOverride("bdfist24",StartDialogNoSet(Player1))~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+	END
+BUT_ONLY
+
+////////////////////////////////////////////////////////////////////////
+//////
+////// ~Add Description Text to Original Scene at Bridge~
+////// 
+////////////////////////////////////////////////////////////////////////
+
+BEGIN @1003 /* ~Add Description Text to Original Scene at Bridge~ */ DESIGNATED 1
+LABEL ~c#sodboabri_TescriptionText~
+REQUIRE_PREDICATE ((GAME_IS ~eet~) OR (GAME_IS ~bgee~ AND FILE_EXISTS_IN_GAME ~bd0103.are~))  @1000 /* ~This component is only compatible with SoD and EET.~ */
+FORBID_COMPONENT ~EET_end.tp2~ ~0~ @1017
+FORBID_COMPONENT ~EET_end.tp2~ ~1~ @1017
+REQUIRE_COMPONENT ~c#sodboabri.tp2~ ~0~ @1004
+FORBID_COMPONENT ~c#sodboabri.tp2~ ~2~ @1009
+FORBID_COMPONENT ~c#sodboabri.tp2~ ~3~ @1009
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~player1.dlg~ THEN BEGIN
+  <<<<<<<< .../inlined/player1.d
+  BEGIN player1
+  >>>>>>>>
+  COMPILE EVAL ~.../inlined/player1.d~
+END
+
+COMPILE EVALUATE_BUFFER ~c#sodboabri/dialogue/player1_bridgemonolog.d~ USING ~c#sodboabri/translations/autotra/%s/dialogues.tra~
+
+/* patch bdboarb.bcs so PC doesn't fall to the ground yet */
+COPY_EXISTING ~bdboarb.BCS~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+/* cases for Imoen in party */
+		SPRINT textToReplace ~\(ActionOverride(Player1,SetSequence(SEQ_DIE))[%newline%]*SmallWait(2)[%newline%]*VerbalConstant(Player1,DYING)[%newline%]*Wait(2)\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~%textToReplace%~ ~~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+/* Player1 monologue instead of cutscene bdcut28.bcs */
+		SPRINT textToReplace ~\(StartCutSceneEx("bdcut28",TRUE)\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~%textToReplace%~ ~SetGlobal("C#stbb_BoareskyrbridgeScene","GLOBAL",1)
+		ActionOverride(Player1,SetDialog("player1"))
+		ActionOverride(Player1,StartDialogueNoSet(Player1))~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+	END
+BUT_ONLY
+
+
+/* patch bdcut28.bcs so Bhaal sign does not appear while screen is black */
+COPY_EXISTING ~bdcut28.BCS~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(True()\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~%textToReplace%~ ~Global("C#stbb_BoareskyrbridgeScene","GLOBAL",1)~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+		SPRINT textToReplace ~\(FadeToColor(\[20\.0\],0)\)[%newline%]*Wait(3)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~%textToReplace%~ ~\1
+		Wait(1)~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+		SPRINT textToReplace ~\(CloseDoor("Bhaal_Skull")[%newline%]*AmbientActivate("Bhaal_Smoke01",TRUE)[%newline%]*AmbientActivate("Bhaal_Smoke02",TRUE)[%newline%]*AmbientActivate("Bhaal_Smoke03",TRUE)[%newline%]*AmbientActivate("Bhaal_Smoke04",TRUE)[%newline%]*AmbientActivate("Bhaal_Smoke05",TRUE)[%newline%]*AmbientActivate("Bhaal_Smoke06",TRUE)\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~%textToReplace%~ ~~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+		SPRINT textToReplace ~\(FadeFromColor(\[20\.0\],0)[%newline%]*Wait(2)\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~%textToReplace%~ ~\1
+		SetGlobal("C#stbb_BoareskyrbridgeScene","GLOBAL",2)
+		SmallWait(1)
+		ActionOverride(Player1,StartDialogNoSet(Player1))
+END
+
+IF
+	GlobalGT("C#stbb_BoareskyrbridgeScene","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CutSceneId("bdcutid")
+		ActionOverride(Player1,SetSequence(SEQ_DIE))
+		SmallWait(2)
+		VerbalConstant(Player1,DYING)
+		ScreenShake([845.1460],20)
+		PlaySound("eff_p92") //110
+		CloseDoor("Bhaal_Skull")
+		AmbientActivate("Bhaal_Smoke01",TRUE)
+		AmbientActivate("Bhaal_Smoke02",TRUE)
+		AmbientActivate("Bhaal_Smoke03",TRUE)
+		AmbientActivate("Bhaal_Smoke04",TRUE)
+		AmbientActivate("Bhaal_Smoke05",TRUE)
+		AmbientActivate("Bhaal_Smoke06",TRUE)
+		Wait(3)~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+	END
+BUT_ONLY
+
+////////////////////////////////////////////////////////////////////////
+//////
+////// ~Bridge Scene has Different Choices~
+////// 
+////////////////////////////////////////////////////////////////////////
+
+BEGIN @1005 /* ~Bridge Scene has Different Choices~ */ DESIGNATED 2
+LABEL ~c#sodboabri_DifferentChoices~
+REQUIRE_PREDICATE ((GAME_IS ~eet~) OR (GAME_IS ~bgee~ AND FILE_EXISTS_IN_GAME ~bd0103.are~))  @1000 /* ~This component is only compatible with SoD and EET.~ */
+FORBID_COMPONENT ~EET_end.tp2~ ~0~ @1017
+FORBID_COMPONENT ~EET_end.tp2~ ~1~ @1017
+REQUIRE_COMPONENT ~c#sodboabri.tp2~ ~0~ @1004
+REQUIRE_COMPONENT ~c#sodboabri.tp2~ ~1~ @1006
+FORBID_COMPONENT ~c#sodboabri.tp2~ ~3~ @1009
+
+
+<<<<<<<< .../inlined/journal.tph
+>>>>>>>>
+OUTER_SET strref_journal = eet_200000 + 66743
+APPEND_OUTER - ~.../inlined/journal.tph~ "/* journal entries */
+
+/* #66743 The Siege of Dragonspear */
+ADD_JOURNAL EXISTING TITLE (#%strref_journal%) @10000 @10001 USING ~c#sodboabri/translations/autotra/%LANGUAGE%/game.tra~"
+INCLUDE ~.../inlined/journal.tph~
+
+COPY_EXISTING ~bdcutid.cre~ ~override/c#stbbhl.cre~
+WRITE_EVALUATED_ASCII 0x280 ~c#stbbhl~ #32 // script name / DV
+
+// Get state for player1 %boareskyr_bridge_02% (in player1_bridgemonolog.d)
+/* @52 /* ~Eine Vision von Bhaal, Eurem göttlichen Vater - getötet von Cyric und Mask in Form eines blutroten Schwertes. Ihr spürt, wie sich das Schwert ins Herz bohrt - nicht Bhaals, sondern Eures! Der Schmerz scheint Euch zu überwältigen, eine unbändige Welle an göttlicher Macht bricht über Euch herein.~ */
+*/
+OUTER_SET boareskyr_bridge_02 = STATE_WHICH_SAYS 52 IN ~c#sodboabri/translations/autotra/%s/dialogues.tra~ FROM ~player1~
+
+COMPILE EVALUATE_BUFFER ~c#sodboabri/dialogue/player1_bridgemonolog_choices.d~ USING ~c#sodboabri/translations/autotra/%s/dialogues.tra~
+
+COMPILE EVAL ~c#sodboabri/scripts/c#stbb28.baf~
+
+
+////////////////////////////////////////////////////////////////////////
+//////
+////// ~Add Stat Changes to Choices at Bridge~
+////// 
+////////////////////////////////////////////////////////////////////////
+
+BEGIN @1008 /* ~Add Stat Changes to Choices at Bridge~ */ DESIGNATED 3
+LABEL ~c#sodboabri_StatChanges~
+REQUIRE_PREDICATE ((GAME_IS ~eet~) OR (GAME_IS ~bgee~ AND FILE_EXISTS_IN_GAME ~bd0103.are~))  @1000 /* ~This component is only compatible with SoD and EET.~ */
+FORBID_COMPONENT ~EET_end.tp2~ ~0~ @1017
+FORBID_COMPONENT ~EET_end.tp2~ ~1~ @1017
+REQUIRE_COMPONENT ~c#sodboabri.tp2~ ~0~ @1004
+REQUIRE_COMPONENT ~c#sodboabri.tp2~ ~2~ @1007
+
+<<<<<<<< .../inlined/spells.tph
+>>>>>>>>
+APPEND_OUTER - ~.../inlined/spells.tph~ "/* copy spells */
+/* WIS increase */
+  COPY ~c#sodboabri/spl/c#stbbw1.spl~ ~override~
+    SAY NAME1 #%eet_2%25990  /* ~Wisdom Increase~ */ 
+    SAY NAME2 #%eet_2%25990
+   LPF ALTER_SPELL_EFFECT
+   INT_VAR
+     match_opcode  = 139   // Display String
+     parameter1    = %eet_2%11338 
+   END
+/* CON increase */
+  COPY ~c#sodboabri/spl/c#stbbd1.spl~ ~override~
+    SAY NAME1 #%eet_2%25989 /* ~Dexterity Increase~ */ 
+    SAY NAME2 #%eet_2%25989
+   LPF ALTER_SPELL_EFFECT
+   INT_VAR
+     match_opcode  = 139   // Display String
+     parameter1    = %eet_2%11336 
+   END
+/* STR increase */
+  COPY ~c#sodboabri/spl/c#stbbc1.spl~ ~override~
+    SAY NAME1 #%eet_2%25988 /* ~Constitution Increase~ */
+    SAY NAME2 #%eet_2%25988
+   LPF ALTER_SPELL_EFFECT
+   INT_VAR
+     match_opcode  = 139   // Display String
+     parameter1    = %eet_2%11334 
+   END"
+INCLUDE ~.../inlined/spells.tph~
+
+// Get state for player1 %boareskyr_bridge_03% (in player1_bridgemonolog_choices.d)
+/* @56 /* ~Eine Woge an unbändigem Schmerz raubt Euch die Sinne.~ */
+*/
+OUTER_SET boareskyr_bridge_03 = STATE_WHICH_SAYS 56 IN ~c#sodboabri/translations/autotra/%s/dialogues.tra~ FROM ~player1~
+
+// Get state for player1 %boareskyr_bridge_04% (in player1_bridgemonolog_choices.d)
+/* @57 /* ~Eine Woge an unbändigem Schmerz rollt über Euch, aber mit all' Eurer Kraft und Fertigkeit leitet Ihr sie über Euch und noch weiter über die Umstehenden. Ihr spürt, wie die Welle an Magie Euch alle streift und von den Füßen stößt, um dann ohne großen Schaden anzurichten in die verfaulten Wasser des Flusses zu schießen, das zu tosen und sprudeln beginnt.~ */
+*/
+OUTER_SET boareskyr_bridge_04 = STATE_WHICH_SAYS 57 IN ~c#sodboabri/translations/autotra/%s/dialogues.tra~ FROM ~player1~
+
+// Get state for player1 %boareskyr_bridge_05% (in player1_bridgemonolog_choices.d)
+/* @58 /* ~Eine Woge an unbändigem Schmerz rollt über Euch, aber Ihr steht unbewegt in der Brandung, mit all' Eurer Kraft und Fertigkeit leitet Ihr sie durch Euch, lasst sie um Euch ihre Wucht entfalten. Ihr spürt, wie sie sich auf die Nahestehenden ausweitet und ihnen die Lebenskraft nimmt.~ */
+*/
+OUTER_SET boareskyr_bridge_05 = STATE_WHICH_SAYS 58 IN ~c#sodboabri/translations/autotra/%s/dialogues.tra~ FROM ~player1~
+
+COMPILE EVALUATE_BUFFER ~c#sodboabri/dialogue/player1_bridgemonolog_choices_statchanges.d~ USING ~c#sodboabri/translations/autotra/%s/dialogues.tra~

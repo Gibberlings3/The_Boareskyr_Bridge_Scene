@@ -1,0 +1,35 @@
+@1000   = ~This component is only compatible with SoD and EET.~
+@1001   = ~Scene at Boareskyr Bridge will be Acknowledged: Add NPC Reactions~
+@1002   = ~Modmerge or Argent's DLC Merger is required before mods can be installed on this game.~
+@1003   = ~Add Description Text to Original Scene at Bridge~
+@1004   = ~The main component "Scene at Boareskyr Bridge will be Acknowledged: Add NPC Reactions" needs to be installed.~
+@1005   = ~Bridge Scene has Different Choices~
+@1006   = ~The component "Add Description Text to Original Scene at Bridge" needs to be installed.~
+@1007   = ~The component "Bridge Scene has Different Choices" needs to be installed.~
+@1008   = ~Add Stat Changes to Choices at Bridge~
+@1009   = ~This component can only be installed before later ones.~
+/*
+@1010   = 
+@1011   = 
+@1012   = 
+@1013   = 
+@1014   = 
+@1015   = 
+@1016   = 
+*/
+@1017   = ~This component needs to be installed before EET_End.~
+/*
+@1018   = 
+@1019   = 
+@1020   = 
+@1021   = 
+@1022   = 
+@1023   = 
+@1024   = 
+@1025   = 
+@1026   = 
+@1027   = 
+@1028   = 
+@1029   = 
+@1030   = 
+*/

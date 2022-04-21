@@ -1,0 +1,38 @@
+/* track whether the PC announced their heritage to the masses */
+<<<<<<<< .../inlined/announce_bhaalheritage.d
+//BDSCHAEL 268 DO 2
+/* #35565 /* ~HEAR ME, people of Baldur's Gate! I AM a Bhaalspawn, like my half-brother Sarevok before me. And I am your only shield against what comes, your only sword. Only one with the divine coursing through their veins could hope to thwart the child of a god, and only one can end the threat of Caelar Argent! Now stand aside, lest you feel my wrath!~ */ */
+ADD_TRANS_ACTION BDSCHAEL BEGIN 268 END BEGIN %responses_268% END ~SetGlobal("C#stbb_BhaalHeritageAnnounced","GLOBAL",1)~ 
+>>>>>>>>
+
+// List of all potential response strrefs to check
+ACTION_DEFINE_ASSOCIATIVE_ARRAY response_strrefs BEGIN
+  ~%eet_2%35565~ => 1
+END
+  
+COPY_EXISTING ~BDSCHAEL.dlg~ ~override~
+  // scanning listed dialog states
+  PATCH_FOR_EACH state IN 268 BEGIN
+    LPF GET_RESPONSE_STRREFS INT_VAR state RET strrefs RET_ARRAY strrefs END
+    TEXT_SPRINT indices ~~  // a temporary variable for building the index list
+    FOR (i = 0; i < strrefs; ++i) BEGIN
+      SET value = $strrefs(~%i%~)
+      // Include index only if strref is listed in the response_strrefs array
+      PATCH_IF (VARIABLE_IS_SET $response_strrefs(~%value%~)) BEGIN
+        TEXT_SPRINT indices ~%indices% %i%~ // building list of indices
+      END
+    END
+    // prevent adding a trigger if index list is empty
+    PATCH_IF (~%indices%~ STR_EQ ~~) BEGIN
+      TEXT_SPRINT indices "IF ~False()~"
+    END
+    // initialize variables responses_268
+    // EVAL is used to create the variable name dynamically
+    TEXT_SPRINT EVAL ~responses_%state%~ ~%indices%~
+    PATCH_PRINT ~Variable %state%: %indices%~
+  END
+BUT_ONLY
+
+// Variables response_x, response_y
+// are now initialized and can be used in the .d file
+COMPILE EVAL ~.../inlined/announce_bhaalheritage.d~

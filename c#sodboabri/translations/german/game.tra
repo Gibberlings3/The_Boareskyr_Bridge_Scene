@@ -1,0 +1,15 @@
+/* script texts */
+@500  = ~Was... was war das? Geht es allen gut?~
+@501  = ~Tot... Sie sind alle tot!~
+
+/* journal entries */
+@10000 = ~Die Belagerung von Drachenspeer
+
+Ich hatte eine Vision von Bhaals Tod.
+
+Als ich die Eberfellbrücke überquert habe, wurde ich von einer Vision vom Tod meines Vaters heimgesucht. Unter den Augen der Verbündeten habe ich bei dem Versuch, die freigesetzte Energie abzuleiten viele auf der Brücke zu Fall gebracht... Das kann zukünftig noch Ärger bedeuten, wenn sich Gerüchte über meine Herkunft unter dem Bündnis verbreiten.~
+@10001 = ~Die Belagerung von Drachenspeer
+
+Ich hatte eine Vision von Bhaals Tod.
+
+Als ich die Eberfellbrücke überquert habe, wurde ich von einer Vision vom Tod meines Vaters heimgesucht. Unter den Augen der Verbündeten habe ich die Energie gebündelt und viele auf der Brücke den Tod gebracht. Das kann zukünftig noch Ärger bedeuten, wenn sich Gerüchte über meine Herkunft unter dem Bündnis verbreiten.~
