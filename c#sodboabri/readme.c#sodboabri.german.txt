@@ -21,7 +21,7 @@ INHALT
 
 Diese Mod ist für den SoD-Teil (auch für EET). 
 
-Sie soll der wichtigen Szene an der Eberfellbrücke in SoD mehr Wirkung verleihen. Wie Gorions Brief und die Träume des HCs in BG1, die Verwandlung in den Schlächter in SoA und die Prüfungen in ToB ist diese Szene ein wichtiger Teil des Wegs des HCs zur Gottheit (bzw. dem Abgeben der göttlichen Essenz). Diese Mod versucht, diese wichtige Szene zu betonen, indem ihr mehr Tiefe verliehen und sie durch Reaktionen von NSCs und anderen Spielcharakteren tiefer in die Geschichte einbezogen wird. 
+Sie soll der Szene an der Eberfellbrücke in SoD mehr Wirkung verleihen. Wie Gorions Brief und die Träume des HCs in BG1, die Verwandlung in den Schlächter in SoA und die Prüfungen in ToB ist diese Szene ein wichtiger Teil des Wegs des HCs zur Gottheit (bzw. dem Abgeben der göttlichen Essenz). Diese Mod versucht, diese wichtige Szene zu betonen, indem ihr mehr Tiefe verliehen und sie durch Reaktionen von NSCs und anderen Spielcharakteren tiefer in die Geschichte einbezogen wird. 
 Abhängig von den installierten Komponenten wird es mehr Warnungen vor dem Betreten der Brücke geben, NSCs werden auf die Geschehnisse auf der Brücke reagieren, und die eigentliche Szene wird mit Beschreibungstexten und Wahlmöglichkeiten für den Spieler erweitert, wie der HC mit der ausbrechenden göttlichen Energie umgeht, einschließlich der daraus resultierenden Statusveränderungen.
 
 Wie üblich verwendet meine Mod so viele Originalinhalte wie möglich.
