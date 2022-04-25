@@ -3,7 +3,7 @@ BACKUP ~c#sodboabri/backup~
 AUTHOR ~##~ 
 
 
-VERSION ~Alpha_220421~
+VERSION ~Alpha_220425~
 
 
 README ~c#sodboabri/readme.c#sodboabri.%LANGUAGE%.txt~ ~c#sodboabri/readme.c#sodboabri.english.txt~
@@ -28,7 +28,7 @@ ACTION_IF GAME_IS ~eet~ THEN BEGIN
   INCLUDE ~EET/other/cpmvars/eet_cpmvars.tpa~
 END
 
-INCLUDE ~sodrtd/lib/get_respone_strrefs.tph~
+INCLUDE ~c#sodboabri/lib/get_respone_strrefs.tph~
 
 INCLUDE ~c#sodboabri/lib/extra_regexp_vars.tph~
 OUTER_SPRINT newline ~%WNL%%LNL%%MNL%%TAB% ~

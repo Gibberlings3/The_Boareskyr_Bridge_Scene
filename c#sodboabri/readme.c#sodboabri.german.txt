@@ -45,8 +45,8 @@ Die eigentliche Cutscene auf der Brücke wurde leicht geändert um der Unterbrec
 
 3 Szene an Brücke mit Reaktionsmöglichkeiten versehen
 ---------------------------------------------
-Diese Komponente fügt Reaktionsmöglichkeiten dazu, wie der HC mit der Energie, die auf der brücke frei wird, umgeht. Es gibt drei Möglichkeiten:
-1. der HC nimmt alle Pein in sich auf um die Umstehenden zu schützen. In diesem Fall verläuft die Cutscene so wie mit Komponente 2: der HC verliert kurz das bewusstsein, die Umstehenden sind unbeschadet.
+Diese Komponente fügt Reaktionsmöglichkeiten dazu, wie der HC mit der Energie, die auf der Brücke frei wird, umgeht. Es gibt drei Möglichkeiten:
+1. der HC nimmt alle Pein in sich auf um die Umstehenden zu schützen. In diesem Fall verläuft die Cutscene so wie mit Komponente 2: der HC verliert kurz das Bewusstsein, die Umstehenden sind unbeschadet.
 2. der HC leitet die Energie möglichst von allen auf der Brücke fort. In diesem Fall werden die nahestehenden fortgeschleudert und erhalten Schaden.
 3. der HC kanalisiert die Energie auf die Umstehenden. In diesem Fall erhalten alle Gruppenmitglieder Schaden und die meisten Soldaten der Flammenden Faust, die sich auf der Brücke befinden, sterben.
 Die Cutscenes für Optionen 2 und 3 wurden entsprechend angepasst.
@@ -153,6 +153,9 @@ https://www.deepl.com/translator
 
 
 ÄNDERUNGSHISTORIE
+
+Version Alpha_220425
+-fixed copy&paste error in tp2 - mod should install without RtD mod folder present.
 
 Version Alpha_220421
 -first public release
