@@ -163,6 +163,9 @@ https://www.deepl.com/translator
 
 HISTORY
 
+Version Alpha_220425
+-fixed copy&paste error in tp2 - mod should install without RtD mod folder present.
+
 Version Alpha_220421
 -first public release
 
