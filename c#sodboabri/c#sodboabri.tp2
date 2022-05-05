@@ -96,6 +96,11 @@ LANGUAGE ~Deutsch~
          ~german~   
          ~c#sodboabri/translations/german/setup.tra~
 	 ~c#sodboabri/translations/german/game.tra~
+	 
+LANGUAGE ~Francais~
+         ~french~   
+         ~c#sodboabri/translations/french/setup.tra~
+	 ~c#sodboabri/translations/french/game.tra~
 
 
 ////////////////////////////////////////////////////////////////////////

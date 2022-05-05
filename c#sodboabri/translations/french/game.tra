@@ -1,0 +1,15 @@
+/* script texts */
+@500  = ~Mais... mais que s'est-il passé ? Est-ce que tout le monde va bien ?~
+@501  = ~Ils sont morts... Ils sont tous morts !~
+
+/* journal entries */
+@10000 = ~Le siège du château Paldragon 
+
+Une vision mortelle.
+
+En traversant le pont de Boarskyr, une intense vision de la mort de mon père s'est imposée à moi et a provoqué une puissante explosion magique. J'ai canalisé l'énergie dégagée, renversant mes camarades et alliés... Cela pourrait causer des problèmes avec la coalition si des rumeurs sur ma filiation venaient à se répandre.~
+@10001 = ~Le siège du château Paldragon 
+
+Une vision mortelle.
+
+En traversant le pont de Boarskyr, une intense vision de la mort de mon père s'est imposée à moi et a provoqué une puissante explosion magique. J'ai utilisé mon savoir-faire pour guider l'énergie dégagée, renversant mes camarades et tuant mes alliés... Cela pourrait causer des problèmes avec la coalition si des rumeurs sur ma filiation venaient à se répandre.~
