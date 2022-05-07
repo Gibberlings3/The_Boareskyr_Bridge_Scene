@@ -119,6 +119,9 @@ DANKSAGUNGEN
 Acifer - Ideen
 maus - Ideen, Skriptinghilfe
 
+Übersetzungen:
+Französisch: JohnBob, korrekturgelesen von Mera (vAlpha_220505)
+
 Danke an BioWare, Black Isle und Wizards of the Coast für Baldur's Gate 1, 2 und die Infinity-Engine, und BeamDog für die Wiederbelebung der Spiele einschließlich der SoD-Kampagne.
 Danke an das Kerzenburgforum und GibberlingsThree für die Bereitstellung eines Ortes für den Austausch von Ideen und technischen Ratschlägen.
 Danke an alle Modder, die die IE-Modding-Tools entwickelt haben und pflegen, ohne die diese Mod nicht möglich gewesen wäre.
@@ -153,6 +156,10 @@ https://www.deepl.com/translator
 
 
 ÄNDERUNGSHISTORIE
+
+Version Alpha_220505
+-French version by JohnBob, proofread by Mera
+-Inserted path to forum for AUTHOR tag in tp2
 
 Version Alpha_220425
 -fixed copy&paste error in tp2 - mod should install without RtD mod folder present.

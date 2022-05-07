@@ -127,6 +127,9 @@ CREDITS
 Acifer - ideas
 maus - ideas, scripting help
 
+Translations
+French: JohnBob, proofreading by Mera (vAlpha_220505)
+
 
 Thanks to BioWare, Black Isle and Wizards of the Coast for Baldur's Gate 1, 2 and the Infinity Engine, and BeamDog for the revival of the games including the SoD campaign.
 Thanks to Kerzenburgforum and GibberlingsThree for giving a place for exchange of ideas and technical advice.
@@ -162,6 +165,10 @@ https://www.deepl.com/translator
 
 
 HISTORY
+
+Version Alpha_220505
+-French version by JohnBob, proofread by Mera
+-Inserted path to forum for AUTHOR tag in tp2
 
 Version Alpha_220425
 -fixed copy&paste error in tp2 - mod should install without RtD mod folder present.
