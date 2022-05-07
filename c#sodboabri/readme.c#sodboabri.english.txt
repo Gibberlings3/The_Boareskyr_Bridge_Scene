@@ -166,7 +166,7 @@ https://www.deepl.com/translator
 
 HISTORY
 
-Version Alpha_220505
+Version 1
 -French version by JohnBob, proofread by Mera
 -Inserted path to forum for AUTHOR tag in tp2
 
