@@ -129,6 +129,7 @@ Acifer - ideas
 maus - ideas, scripting help
 
 Translations
+Italian: improb@bile (v2)
 French: JohnBob, proofreading by Mera (vAlpha_220505)
 
 
@@ -166,6 +167,9 @@ https://www.deepl.com/translator
 
 
 HISTORY
+
+Version 2
+-Italian version by improb@bile
 
 Version 1
 -French version by JohnBob, proofread by Mera
