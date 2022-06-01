@@ -120,6 +120,7 @@ Acifer - Ideen
 maus - Ideen, Skriptinghilfe
 
 Übersetzungen:
+Italienisch: improb@bile (v2)
 Französisch: JohnBob, korrekturgelesen von Mera (vAlpha_220505)
 
 Danke an BioWare, Black Isle und Wizards of the Coast für Baldur's Gate 1, 2 und die Infinity-Engine, und BeamDog für die Wiederbelebung der Spiele einschließlich der SoD-Kampagne.
@@ -156,6 +157,9 @@ https://www.deepl.com/translator
 
 
 ÄNDERUNGSHISTORIE
+
+Version 2
+-Italian version by improb@bile
 
 Version 1
 -French version by JohnBob, proofread by Mera
