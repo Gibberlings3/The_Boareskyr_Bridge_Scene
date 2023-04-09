@@ -24,12 +24,12 @@ THEN
 		AmbientActivate("Bhaal_Smoke05",TRUE)
 		AmbientActivate("Bhaal_Smoke06",TRUE)
 		Wait(3)
-		AddJournalEntry(66864,QUEST_DONE)  
-		AddJournalEntry(66865,QUEST)  
+		AddJournalEntry(%eet_2%66864,QUEST_DONE)  
+		AddJournalEntry(%eet_2%66865,QUEST)  
 		ActionOverride(Player1,SetSequence(SEQ_AWAKE))
 		SmallWait(5)
 		ActionOverride(Player1,SetSequence(SEQ_AWAKE))
-		DisplayStringHead("bdfist22",70646)  // Look, <PRO_HESHE>'s coming around.
+		DisplayStringHead("bdfist22",%eet_2%70646)  // Look, <PRO_HESHE>'s coming around.
 		SmallWait(10)
 		ActionOverride(Player1,FaceObject("bdfist24"))
 		SmallWait(2)
