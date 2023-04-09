@@ -168,6 +168,7 @@ https://www.deepl.com/translator
 HISTORY
 
 Version 3
+-Correct text lines should be used for EET
 -Typo correction
 
 Version 2
