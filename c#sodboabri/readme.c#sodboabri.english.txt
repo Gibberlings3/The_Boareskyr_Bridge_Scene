@@ -167,6 +167,9 @@ https://www.deepl.com/translator
 
 HISTORY
 
+Version 3
+-Typo correction
+
 Version 2
 -Italian version by improb@bile
 
