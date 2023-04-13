@@ -158,6 +158,10 @@ https://www.deepl.com/translator
 
 ÄNDERUNGSHISTORIE
 
+Version 3
+-Correct text lines should be used for EET
+-Typo correction
+
 Version 2
 -Italian version by improb@bile
 
