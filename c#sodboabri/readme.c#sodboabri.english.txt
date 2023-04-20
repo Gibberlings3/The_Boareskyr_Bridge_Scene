@@ -130,6 +130,7 @@ maus - ideas, scripting help
 Translations
 Italian: improb@bile (v2)
 French: JohnBob, proofreading by Mera (vAlpha_220505)
+Russian: scheele (v4)
 
 
 Thanks to BioWare, Black Isle and Wizards of the Coast for Baldur's Gate 1, 2 and the Infinity Engine, and BeamDog for the revival of the games including the SoD campaign.
