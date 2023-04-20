@@ -3,7 +3,7 @@ BACKUP ~c#sodboabri/backup~
 AUTHOR ~https://www.gibberlings3.net/forums/topic/35297-modalpha-the-boareskyr-bridge-scene-mod-for-sod/~ 
 
 
-VERSION ~v3~
+VERSION ~v4~
 
 
 README ~c#sodboabri/readme.c#sodboabri.%LANGUAGE%.txt~ ~c#sodboabri/readme.c#sodboabri.english.txt~
@@ -106,6 +106,11 @@ LANGUAGE ~Italiano~
          ~italian~   
          ~c#sodboabri/translations/italian/setup.tra~
 	 ~c#sodboabri/translations/italian/game.tra~
+
+LANGUAGE ~Russian~
+         ~russian~   
+         ~c#sodboabri/translations/english/setup.tra~
+	 ~c#sodboabri/translations/russian/game.tra~
 
 
 ////////////////////////////////////////////////////////////////////////

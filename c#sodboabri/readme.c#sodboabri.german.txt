@@ -158,6 +158,9 @@ https://www.deepl.com/translator
 
 ÄNDERUNGSHISTORIE
 
+Version 4
+-Russian version added, by scheele.
+
 Version 3
 -Correct text lines should be used for EET
 -Typo correction
