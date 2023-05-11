@@ -78,8 +78,8 @@ Die Mod ist nativ EET-kompatibel und muss vor EET_End installiert werden.
 
 HINWEIS AN ALLE SPIELER DER DEUTSCHEN VERSION
 
-Die deutsche Modversion orientiert sich an der deutschen Fanübersetzung "Deutsche Übersetzung für SoD". Dies bedeutet, dass die im Spiel verwendeten Eigennamen und Übersetzungen der Örtlichkeiten etc. mit der Fanübersetzung konsistent sind und zur offiziellen SoD-Übersetzung Diskrepanzen bestehen können, vor allem bei den Namen der Spielcharaktere. Installiert die Fanübersetzung für ein konsistentes Spielerlebnis.
-Download Link: https://baldurs-gate.de/index.php?resources/deutsche-%C3%9Cbersetzung-f%C3%BCr-sod.49/
+Die deutsche Modversion orientiert sich an der deutschen Fanübersetzung "Shai Huluds Text-Patch". Dies bedeutet, dass die im Spiel verwendeten Eigennamen und Übersetzungen der Örtlichkeiten etc. mit der Fanübersetzung konsistent sind und zur offiziellen SoD-Übersetzung Diskrepanzen bestehen, vor allem bei den Namen der Spielcharaktere. Installiert die Fanübersetzung für ein konsistentes Spielerlebnis.
+Download Link: https://www.baldurs-gate.de/index.php?threads/shai-huluds-text-patch.45417/
 
 
 INSTALLATION
@@ -122,7 +122,6 @@ maus - Ideen, Skriptinghilfe
 Übersetzungen:
 Italienisch: improb@bile (v2)
 Französisch: JohnBob, korrekturgelesen von Mera (vAlpha_220505)
-Russian: scheele (v4)
 
 Danke an BioWare, Black Isle und Wizards of the Coast für Baldur's Gate 1, 2 und die Infinity-Engine, und BeamDog für die Wiederbelebung der Spiele einschließlich der SoD-Kampagne.
 Danke an das Kerzenburgforum und GibberlingsThree für die Bereitstellung eines Ortes für den Austausch von Ideen und technischen Ratschlägen.
@@ -158,6 +157,9 @@ https://www.deepl.com/translator
 
 
 ÄNDERUNGSHISTORIE
+
+Version 4.1
+-Updated link in readme to "Shai Huluds Text-Patch" (German version).
 
 Version 4
 -Russian version added, by scheele.

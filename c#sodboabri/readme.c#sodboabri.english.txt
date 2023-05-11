@@ -47,7 +47,6 @@ This component adds reaction possibilities to how the PC deals with the energy r
 
 1. the PC absorbs all the torment to protect the bystanders. In this case, the cutscene proceeds like in the original (with slight changes to accommodate to the interruptions by description texts): the PC briefly loses consciousness, the bystanders are unharmed.
 2. The PC diverts the energy away from everyone on the bridge. In this case, those close by will be struck from their feet and receive some damage.
-
 3. the PC channels the energy to the bystanders. In this case, all party members receive damage and most of the Flaming Fist soldiers who are on the bridge will die.
 
 The cutscenes for options 2 and 3 have been altered accordingly.
@@ -86,8 +85,8 @@ The mod has native EET compatibility and needs to be installed before EET_End.
 
 NOTE TO GERMAN PLAYERS
 
-The German version is consistent to the fan-made "Deutsche Übersetzung für SoD". This means, that names and terms could differ from the official German version shipped with the game. Install "Deutsche Übersetzung für SoD" for a consistent game experience.
-Download Link: https://baldurs-gate.de/index.php?resources/deutsche-%C3%9Cbersetzung-f%C3%BCr-sod.49/
+The German version is consistent to the fan-made "Shai Huluds Text-Patch". This means, that names and terms could differ from the official German version shipped with the game. Install the fan made SoD translation for a consistent game experience.
+Download Link: https://www.baldurs-gate.de/index.php?threads/shai-huluds-text-patch.45417/
 
 
 INSTALLATION
@@ -130,7 +129,6 @@ maus - ideas, scripting help
 Translations
 Italian: improb@bile (v2)
 French: JohnBob, proofreading by Mera (vAlpha_220505)
-Russian: scheele (v4)
 
 
 Thanks to BioWare, Black Isle and Wizards of the Coast for Baldur's Gate 1, 2 and the Infinity Engine, and BeamDog for the revival of the games including the SoD campaign.
@@ -167,6 +165,9 @@ https://www.deepl.com/translator
 
 
 HISTORY
+
+Version 4.1
+-Updated link in readme to "Shai Huluds Text-Patch" (German version).
 
 Version 4
 -Russian version added, by scheele.
