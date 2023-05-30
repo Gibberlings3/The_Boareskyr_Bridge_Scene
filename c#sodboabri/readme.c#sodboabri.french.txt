@@ -81,8 +81,8 @@ Le mod est compatible avec EET et doit être installé avant EET_End
 
 
 NOTE TO GERMAN PLAYERS
-The German version is consistent to the fan-made "Deutsche Übersetzung für SoD". This means, that names and terms could differ from the official German version shipped with the game. Install "Deutsche Übersetzung für SoD" for a consistent game experience.
-Download Link: https://baldurs-gate.de/index.php?resources/deutsche-%C3%9Cbersetzung-f%C3%BCr-sod.49/
+The German version is consistent to the fan-made "Shai Huluds Text-Patch". This means, that names and terms could differ from the official German version shipped with the game. Install the fan made SoD translation for a consistent game experience.
+Download Link: https://www.baldurs-gate.de/index.php?threads/shai-huluds-text-patch.45417/
 
 
 Installation
@@ -131,7 +131,7 @@ maus - ideas, scripting help
 Translations
 Italian: improb@bile (v2)
 French: JohnBob, proofreading by Mera (vAlpha_220505)
-Russian: scheele (v4)
+Polish: GoForTheEyes (v5)
 
 
 Thanks to BioWare, Black Isle and Wizards of the Coast for Baldur's Gate 1, 2 and the Infinity Engine, and BeamDog for the revival of the games including the SoD campaign.
@@ -168,6 +168,10 @@ https://www.deepl.com/translator
 
 
 HISTORY
+
+Version 5
+-Polish version added, by GoForTheEyes.
+-Updated link in readme to "Shai Huluds Text-Patch" (German version).
 
 Version 4
 -Russian version added, by scheele.
