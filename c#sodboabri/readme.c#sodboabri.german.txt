@@ -122,6 +122,7 @@ maus - Ideen, Skriptinghilfe
 Übersetzungen:
 Italienisch: improb@bile (v2)
 Französisch: JohnBob, korrekturgelesen von Mera (vAlpha_220505)
+Polish: GoForTheEyes (v5)
 
 Danke an BioWare, Black Isle und Wizards of the Coast für Baldur's Gate 1, 2 und die Infinity-Engine, und BeamDog für die Wiederbelebung der Spiele einschließlich der SoD-Kampagne.
 Danke an das Kerzenburgforum und GibberlingsThree für die Bereitstellung eines Ortes für den Austausch von Ideen und technischen Ratschlägen.
@@ -158,7 +159,8 @@ https://www.deepl.com/translator
 
 ÄNDERUNGSHISTORIE
 
-Version 4.1
+Version 5
+-Polish version added, by GoForTheEyes.
 -Updated link in readme to "Shai Huluds Text-Patch" (German version).
 
 Version 4
