@@ -1,0 +1,15 @@
+/* script texts */
+@500  = ~¿Qué... qué fue eso? ¿Estáis todos bien?~
+@501  = ~Muertos... ¡Están todos muertos!~
+
+/* journal entries */
+@10000 = ~Sucesos importantes
+
+He tenido una visión de la muerte de Bhaal. 
+
+Al cruzar el puente de Boareskyr, tuve una visión de la muerte de mi padre. Con los ojos de mis aliados sobre mí, canalicé una energía liberada, derribando a mis compañeros y aliados a mi alrededor... Esto puede causarme problemas en el futuro, si los rumores sobre mi parentesco se extienden entre la coalición.~
+@10001 = ~Sucesos importantes
+
+He tenido una visión de la muerte de Bhaal.
+
+Al cruzar el puente de Boareskyr, tuve una visión de la muerte de mi padre. Con los ojos de mis aliados sobre mí, canalicé una energía liberada, derribando a mis compañeros y matando a varios aliados a mi alrededor... Esto puede causarme problemas más adelante, si los rumores sobre mi parentesco se extienden entre la coalición.~

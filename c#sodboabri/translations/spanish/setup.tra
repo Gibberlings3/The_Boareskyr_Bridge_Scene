@@ -1,0 +1,35 @@
+@1000   = ~Este componente solo es compatible con SoD y EET.~
+@1001   = ~Los NPC mencionan la escena en el puente de Boareskyr: Reacciones de los NPC~
+@1002   = ~Modmerge o DLC Merger es necesario antes de poder instalar mods en este juego.~
+@1003   = ~Texto descriptivo en la escena original del puente~
+@1004   = ~El componente principal "Los NPC mencionan la escena en el puente de Boareskyr: Reacciones de los NPC" necesita ser instalado.~
+@1005   = ~La escena del puente tiene diferentes elecciones~
+@1006   = ~El componente "Texto descriptivo en la escena original del puente" necesita ser instalado.~
+@1007   = ~El componente "La escena del puente tiene diferentes elecciones" necesita ser instalado.~
+@1008   = ~Cambios en las estadisticas con las elecciones del puente~
+@1009   = ~Este componente solo puede instalarse antes de los siguientes.~
+/*
+@1010   = 
+@1011   = 
+@1012   = 
+@1013   = 
+@1014   = 
+@1015   = 
+@1016   = 
+*/
+@1017   = ~Este componente debe instalarse antes de EET_End.~
+/*
+@1018   = 
+@1019   = 
+@1020   = 
+@1021   = 
+@1022   = 
+@1023   = 
+@1024   = 
+@1025   = 
+@1026   = 
+@1027   = 
+@1028   = 
+@1029   = 
+@1030   = 
+*/
