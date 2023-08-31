@@ -120,9 +120,11 @@ Acifer - Ideen
 maus - Ideen, Skriptinghilfe
 
 Übersetzungen:
+Französisch: JohnBob, proofreading by Mera (vAlpha_220505)
 Italienisch: improb@bile (v2)
-Französisch: JohnBob, korrekturgelesen von Mera (vAlpha_220505)
-Polish: GoForTheEyes (v5)
+Polnisch: GoForTheEyes (v5)
+Russisch: scheele (v4)
+Spanisch: ElGamerViejuno (v6)
 
 Danke an BioWare, Black Isle und Wizards of the Coast für Baldur's Gate 1, 2 und die Infinity-Engine, und BeamDog für die Wiederbelebung der Spiele einschließlich der SoD-Kampagne.
 Danke an das Kerzenburgforum und GibberlingsThree für die Bereitstellung eines Ortes für den Austausch von Ideen und technischen Ratschlägen.
@@ -158,6 +160,9 @@ https://www.deepl.com/translator
 
 
 ÄNDERUNGSHISTORIE
+
+Version 6
+-Spanish version added, by ElGamerViejuno
 
 Version 5
 -Polish version added, by GoForTheEyes.
