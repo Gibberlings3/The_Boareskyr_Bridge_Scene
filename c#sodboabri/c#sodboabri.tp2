@@ -121,7 +121,10 @@ LANGUAGE ~Spanish~
          ~spanish~   
          ~c#sodboabri/translations/spanish/setup.tra~
 	 ~c#sodboabri/translations/spanish/game.tra~
-
+LANGUAGE ~Simplified Chinese~
+         ~schinese~   
+         ~c#sodboabri/translations/schinese/setup-%WEIDU_OS%.tra~
+	 ~c#sodboabri/translations/schinese/game.tra~
 
 ////////////////////////////////////////////////////////////////////////
 //////
@@ -306,7 +309,7 @@ COPY_EXISTING ~bdcutid.cre~ ~override/c#stbbhl.cre~
 WRITE_EVALUATED_ASCII 0x280 ~c#stbbhl~ #32 // script name / DV
 
 // Get state for player1 %boareskyr_bridge_02% (in player1_bridgemonolog.d)
-/* @52 /* ~Eine Vision von Bhaal, Eurem göttlichen Vater - getötet von Cyric und Mask in Form eines blutroten Schwertes. Ihr spürt, wie sich das Schwert ins Herz bohrt - nicht Bhaals, sondern Eures! Der Schmerz scheint Euch zu überwältigen, eine unbändige Welle an göttlicher Macht bricht über Euch herein.~ */
+/* @52 /* ~Eine Vision von Bhaal, Eurem gÃ¶ttlichen Vater - getÃ¶tet von Cyric und Mask in Form eines blutroten Schwertes. Ihr spÃ¼rt, wie sich das Schwert ins Herz bohrt - nicht Bhaals, sondern Eures! Der Schmerz scheint Euch zu Ã¼berwÃ¤ltigen, eine unbÃ¤ndige Welle an gÃ¶ttlicher Macht bricht Ã¼ber Euch herein.~ */
 */
 OUTER_SET boareskyr_bridge_02 = STATE_WHICH_SAYS 52 IN ~c#sodboabri/translations/autotra/%s/dialogues.tra~ FROM ~player1~
 
@@ -362,17 +365,17 @@ APPEND_OUTER - ~.../inlined/spells.tph~ "/* copy spells */
 INCLUDE ~.../inlined/spells.tph~
 
 // Get state for player1 %boareskyr_bridge_03% (in player1_bridgemonolog_choices.d)
-/* @56 /* ~Eine Woge an unbändigem Schmerz raubt Euch die Sinne.~ */
+/* @56 /* ~Eine Woge an unbÃ¤ndigem Schmerz raubt Euch die Sinne.~ */
 */
 OUTER_SET boareskyr_bridge_03 = STATE_WHICH_SAYS 56 IN ~c#sodboabri/translations/autotra/%s/dialogues.tra~ FROM ~player1~
 
 // Get state for player1 %boareskyr_bridge_04% (in player1_bridgemonolog_choices.d)
-/* @57 /* ~Eine Woge an unbändigem Schmerz rollt über Euch, aber mit all' Eurer Kraft und Fertigkeit leitet Ihr sie über Euch und noch weiter über die Umstehenden. Ihr spürt, wie die Welle an Magie Euch alle streift und von den Füßen stößt, um dann ohne großen Schaden anzurichten in die verfaulten Wasser des Flusses zu schießen, das zu tosen und sprudeln beginnt.~ */
+/* @57 /* ~Eine Woge an unbÃ¤ndigem Schmerz rollt Ã¼ber Euch, aber mit all' Eurer Kraft und Fertigkeit leitet Ihr sie Ã¼ber Euch und noch weiter Ã¼ber die Umstehenden. Ihr spÃ¼rt, wie die Welle an Magie Euch alle streift und von den FÃ¼ÃŸen stÃ¶ÃŸt, um dann ohne groÃŸen Schaden anzurichten in die verfaulten Wasser des Flusses zu schieÃŸen, das zu tosen und sprudeln beginnt.~ */
 */
 OUTER_SET boareskyr_bridge_04 = STATE_WHICH_SAYS 57 IN ~c#sodboabri/translations/autotra/%s/dialogues.tra~ FROM ~player1~
 
 // Get state for player1 %boareskyr_bridge_05% (in player1_bridgemonolog_choices.d)
-/* @58 /* ~Eine Woge an unbändigem Schmerz rollt über Euch, aber Ihr steht unbewegt in der Brandung, mit all' Eurer Kraft und Fertigkeit leitet Ihr sie durch Euch, lasst sie um Euch ihre Wucht entfalten. Ihr spürt, wie sie sich auf die Nahestehenden ausweitet und ihnen die Lebenskraft nimmt.~ */
+/* @58 /* ~Eine Woge an unbÃ¤ndigem Schmerz rollt Ã¼ber Euch, aber Ihr steht unbewegt in der Brandung, mit all' Eurer Kraft und Fertigkeit leitet Ihr sie durch Euch, lasst sie um Euch ihre Wucht entfalten. Ihr spÃ¼rt, wie sie sich auf die Nahestehenden ausweitet und ihnen die Lebenskraft nimmt.~ */
 */
 OUTER_SET boareskyr_bridge_05 = STATE_WHICH_SAYS 58 IN ~c#sodboabri/translations/autotra/%s/dialogues.tra~ FROM ~player1~
 
