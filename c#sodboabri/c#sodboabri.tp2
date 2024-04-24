@@ -57,7 +57,7 @@ ACTION_IF !FILE_EXISTS ~c#sodboabri/install/c#sodboabriinstall.mrk~ BEGIN
 
     LAF autotra_workaround END
 
-  ACTION_DEFINE_ARRAY fl#noconvert BEGIN setup END
+  ACTION_DEFINE_ARRAY fl#noconvert BEGIN setup setup-osx setup-unix setup-win32 END
 
   ACTION_DEFINE_ARRAY fl#reload BEGIN game END
 
