@@ -31,11 +31,11 @@
 @30  = ~[PC Reply]Boareskyr Bridge is the place where Bhaal died by Cyric's hand, or rather by Mask, who had transformed into a sword.~
 @31  = ~[PC Reply]You sound concerned, Jaheira.~
 @32  = ~[PC Reply]Enlighten me.~
-@33  = ~[Jaheira]They know, yes. At the latest after reading Sarevok's journal and his assumptions about your heritage, and you can assume that they have obtained certainty about it by now. If your heritage has not been an issue for them so far, then we should do everything to keep it that way.~
+@33  = ~[Jaheira]They know, yes. At the least, after reading Sarevok's journal and his assumptions about your heritage, you can assume that they have obtained certainty about it by now. If your heritage has not been an issue for them so far, then we should do everything to keep it that way.~
 @34  = ~[Jaheira]We were... good friends. He sent you to us for a reason. Gorion did want to tell you, <CHARNAME>.~
 @35  = ~[Jaheira]You being the hero of Baldur's Gate I am not surprised to see you lead the soldiers against Caelar, but considering your divine heritage I am surprised they let you go to Boareskyr Bridge of all places - I assume that the way at Coastway Crossing is blocked. This is... inconvenient, to say the least, especially in these politically heated times.~
 @36  = ~[Jaheira]<CHARNAME>, I need to talk to you about the Boareskyr Bridge and its mystical significance with regard to your divine heritage. Do you know what happened on that bridge?~
-@37  = ~[Jaheira]Boareskyr Bridge is the place where your divine father was killed in a plot by Cyrik and Mask.~
+@37  = ~[Jaheira]Boareskyr Bridge is the place where your divine father was killed in a plot by Cyric and Mask.~
 @38  = ~[Jaheira]This bridge has witnessed an unimaginable divine power. And it happened not too long ago. The waters of the river became undrinkable - until today.~
 @39  = ~[PC Reply]Do you expect something to happen to me on the bridge?~
 @40  = ~[PC Reply]Are you trying to stop me from going on that bridge?~
@@ -56,7 +56,7 @@
 @55  = ~[Description Text]You do not stand in the way of the surge of magic. On the contrary, you guide it through you so that it can unleash its destructive power around you - on the bystanders around you on the bridge.~
 @56  = ~[Description Text]A wave of irrepressible pain robs you of your senses.~
 @57  = ~[Description Text]A wave of unbridled pain rolls over you, but with all your strength and skill you channel it so it will go over you and even further over the bystanders. You feel the wave of magic brush all of you and knock you off your feet without causing any major damage, to then shoot into the putrid waters of the river which begin to roar and bubble.~
-@58  = ~[Description Text]A wave of irrepressible pain rolls over you, but you stand unmoved in the surf, with all your strength and skill you guide it through you, let it unfold its force around you. You feel how it spreads to those close to you, taking their life force.~
+@58  = ~[Description Text]A wave of irrepressible pain rolls over you, but you stand unmoved in the surf. With all your strength and skill, you guide it through you, letting its force unfold around you. You feel how it spreads to those close to you, taking their life force.~
 @59  = ~[FF Healer (female)]<CHARNAME>! Are you alright? What happened here?~
 @60  = ~[FF Healer (female)]Is everyone alright? <CHARNAME>! What happened here?~
 @61  = ~[FF Healer (female)]They... they are all dead! <CHARNAME> - what happened here?~
@@ -72,10 +72,10 @@
 @71  = ~[FF Healer (female)]This is the sign of Bhaal - god of murder! And it appeared right around you - around <CHARNAME>, Bhaalchild by <PRO_HISHER> own admission!~
 @72  = ~[FF Healer (female)]This is not nothing, on the contrary. This was most unsettling!~
 @73  = ~[FF Healer (female)]A surge of magic energy was released, but I do not feel it on you any more! It seems you were the only one being hit by it. Feeling it was frightening, to say the least!~
-@74  = ~[FF Healer (female)]A surge of magic energy was reliesed, knocking all of us from our feet, but I do not feel it any more! Feeling it was frightening, to say the least!~
+@74  = ~[FF Healer (female)]A surge of magic energy was released, knocking all of us from our feet, but I do not feel it any more! Feeling it was frightening, to say the least!~
 @75  = ~[FF Healer (female)]A surge of magic energy was released, hitting and *killing* nearly all of us! I do not feel the power any more - it seems to be done with causing destruction and death. What... what a frightening thing to happen!~
 @76  = ~[FF Healer (female)]Everyone saw the sign of Bhaal painting itself on the ground around you. I fear what happened here will be the source of much speculation and rumors. Let us move on and leave this place.~
-@77  = ~[Marshal Nederlok]What the hell happened at Boareskyr Bridge? - Save the words, Captain, I already received report. This was unfavorable, to say the least.~
+@77  = ~[Marshal Nederlok]What the hell happened at Boareskyr Bridge? - Save your words, Captain, I already received a report. This was unfortunate, to say the least.~
 @78  = ~[Captain Corwin]I'll take full responsibility, Marshal. We had no other choice but to cross there - and no way of knowing *this* would happen.~
 @79  = ~[Marshal Nederlok]Of course, Captain. We will talk about this another time.~
 @80  = ~[Torsin De Lancie]Who released some super magic surge at Boareskyr Bridge because <PRO_HESHE> is a child of Bhaal, appearently! Why does the hero of Baldur's Gate have to be a Bhaalchild <PRO_HIMHER>self!~

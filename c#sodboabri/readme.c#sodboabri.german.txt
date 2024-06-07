@@ -161,6 +161,10 @@ https://www.deepl.com/translator
 
 ÄNDERUNGSHISTORIE
 
+Version 7
+-Simplified Chinese translation added, by yoshimo0417, setup.tra format corrections by MephistoSatanDevil
+-typo ocrrections.
+
 Version 6
 -Spanish version added, by ElGamerViejuno
 
