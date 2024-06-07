@@ -133,6 +133,7 @@ French: JohnBob, proofreading by Mera (vAlpha_220505)
 Italian: improb@bile (v2)
 Polish: GoForTheEyes (v5)
 Russian: scheele (v4)
+Chinese (simplified) by yoshimo0417, setup.tra format corrections by MephistoSatanDevil (v7)
 Spanish: ElGamerViejuno (v6)
 
 

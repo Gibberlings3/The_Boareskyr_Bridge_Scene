@@ -124,6 +124,7 @@ Französisch: JohnBob, proofreading by Mera (vAlpha_220505)
 Italienisch: improb@bile (v2)
 Polnisch: GoForTheEyes (v5)
 Russisch: scheele (v4)
+Chinese (simplified) by yoshimo0417, setup.tra format corrections by MephistoSatanDevil (v7)
 Spanisch: ElGamerViejuno (v6)
 
 Danke an BioWare, Black Isle und Wizards of the Coast für Baldur's Gate 1, 2 und die Infinity-Engine, und BeamDog für die Wiederbelebung der Spiele einschließlich der SoD-Kampagne.
