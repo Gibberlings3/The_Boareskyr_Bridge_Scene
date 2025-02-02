@@ -57,7 +57,7 @@ ACTION_IF !FILE_EXISTS ~c#sodboabri/install/c#sodboabriinstall.mrk~ BEGIN
 
     LAF autotra_workaround END
 
-  ACTION_DEFINE_ARRAY fl#noconvert BEGIN setup setup-osx setup-unix setup-win32 END
+  ACTION_DEFINE_ARRAY fl#noconvert BEGIN setup install END
 
   ACTION_DEFINE_ARRAY fl#reload BEGIN game END
 
@@ -123,7 +123,7 @@ LANGUAGE ~Spanish~
 	 ~c#sodboabri/translations/spanish/game.tra~
 LANGUAGE ~Simplified Chinese~
          ~schinese~   
-         ~c#sodboabri/translations/schinese/setup-%WEIDU_OS%.tra~
+         ~c#sodboabri/translations/schinese/install.tra~
 	 ~c#sodboabri/translations/schinese/game.tra~
 
 ////////////////////////////////////////////////////////////////////////
