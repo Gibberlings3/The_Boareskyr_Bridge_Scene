@@ -10,13 +10,15 @@ It gives more impact to the important scene at Boareskyr Bridge in SoD. Like Gor
 There will be more warnings before going to the bridge and NPCs will react to what happens on it, and depending on the installed components the actual scene will also be extended with description text and choices for the player how the PC will deal with the erupting divine energy including resulting stat changes.
 As usual, my mod uses as many original content as possible.
 
-Note: If downloading from GitHub, make sure you download the latest release from the releases page!
+Note: If downloading from GitHub, make sure you download the latest release from the [Releases](https://github.com/Gibberlings3/The_Boareskyr_Bridge_Scene/releases) page!
 
-[Discussion Thread at GibbrlingsThree](...)
+[Discussion thread at GibbrlingsThree](https://www.gibberlings3.net/forums/topic/35297-mod-the-boareskyr-bridge-scene-mod-for-sod/)
 
-[German Discussion Thread at Kerzenburgforum](...)
+[German discussion thread at Kerzenburgforum](https://baldurs-gate.de/index.php?threads/die-szene-auf-der-eberfellbr%C3%BCcke-mod-f%C3%BCr-sod.45393/)
 
-[Mod Page at Kerzenburgforum](...)
+[Mod page at Kerzenburgforum](https://baldurs-gate.de/index.php?resources/the-boareskyr-bridge-scene-mod-f%C3%BCr-sod.63/)
+
+[Mod page at GibberlingsThree](https://www.gibberlings3.net/mods/quests/tbbs/)
 
 
 ## LEGAL INFORMATION
