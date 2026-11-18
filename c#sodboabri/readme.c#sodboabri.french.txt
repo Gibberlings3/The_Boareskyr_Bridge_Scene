@@ -172,6 +172,9 @@ https://www.deepl.com/translator
 
 HISTORY
 
+Version 8
+-Adjust simplified chinese file constrution, by yoshimo0417.
+
 Version 7
 -Simplified Chinese translation added, by yoshimo0417, setup.tra format corrections by MephistoSatanDevil
 -typo ocrrections.
